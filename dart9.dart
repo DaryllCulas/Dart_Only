@@ -1,9 +1,11 @@
 import 'dart:io';
 
 void main() {
-  vowelOrConsonant();
-  oddOrEven();
-  PositiveOrNegative();
+  // vowelOrConsonant();
+  // oddOrEven();
+  // PositiveOrNegative();
+  // sumOfTwoNumbers();
+  calculator();
 }
 
 void vowelOrConsonant() {
@@ -60,5 +62,65 @@ void PositiveOrNegative() {
             : ">>> Negative\n";
 
     print(result);
+  }
+}
+
+void sumOfTwoNumbers() {
+  int? sum;
+  print("Enter first number:");
+  int? num3 = int.parse(stdin.readLineSync()!);
+
+  print("Enter second number");
+  int? num4 = int.parse(stdin.readLineSync()!);
+
+  sum = num3 + num4;
+  print("$num3 + $num4 = $sum");
+}
+
+void calculator() {
+  var isRepeat = false;
+  int? sum;
+  int? diff;
+  int? product;
+  double? quotient;
+
+  while (!isRepeat) {
+    print("Enter first number: ");
+    int? num4 = int.parse(stdin.readLineSync()!);
+
+    print("Enter second number");
+    int? num5 = int.parse(stdin.readLineSync()!);
+
+    print("----------------------------------------------------");
+    print("\nSelect operation:");
+    print("a.) Addition\nb.)Subtraction\nc.)Multiplication\nd.) Division");
+    print("----------------------------------------------------\n");
+    print("Put your chosen operator below");
+    String? operators = stdin.readLineSync();
+
+    switch (operators) {
+      case 'a' || 'a.' || 'A' || 'A.':
+        sum = num4 + num5;
+        print(" >>> $num4 + $num5 = $sum\n");
+        break;
+      case 'b' || 'b.' || 'B' || 'B.':
+        diff = num4 - num5;
+        print(" >>> $num4 - $num5 = $diff\n");
+        break;
+      case 'c' || 'c.' || 'C' || 'C.':
+        product = num4 * num5;
+        print(" >>> $num4 x $num5 = $product\n");
+        break;
+      case 'd' || 'd.' || 'D' || 'D.':
+        quotient = num4 / num5;
+        if (num5 == 0) {
+          print(" >>> Cannot be divided by zero\n");
+          isRepeat = true;
+        }
+        print(" >>> $num4 / $num5 = $quotient\n");
+        break;
+      default:
+        print(" >>> You haven't choose your operator, please try again!!!!!");
+    }
   }
 }
