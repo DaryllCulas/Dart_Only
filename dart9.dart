@@ -5,7 +5,8 @@ void main() {
   // oddOrEven();
   // PositiveOrNegative();
   // sumOfTwoNumbers();
-  calculator();
+  // calculator();
+  numberToIterateUpTo100Times();
 }
 
 void vowelOrConsonant() {
@@ -122,5 +123,15 @@ void calculator() {
       default:
         print(" >>> You haven't choose your operator, please try again!!!!!");
     }
+  }
+}
+
+void numberToIterateUpTo100Times() {
+  int bound = 100;
+  for (int i = 1; i <= bound; i++) {
+    if (i == 41) {
+      continue;
+    }
+    print(i);
   }
 }
