@@ -6,7 +6,8 @@ void main() {
   // PositiveOrNegative();
   // sumOfTwoNumbers();
   // calculator();
-  numberToIterateUpTo100Times();
+  // numberToIterateUpTo100Times();
+  calculateSimpleInterest(12.50, 56.32, 45);
 }
 
 void vowelOrConsonant() {
@@ -134,4 +135,9 @@ void numberToIterateUpTo100Times() {
     }
     print(i);
   }
+}
+
+void calculateSimpleInterest(double principal, double rate, double time) {
+  double interest = principal * rate * time / 100;
+  print("Simple interest: $interest");
 }
