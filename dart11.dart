@@ -4,7 +4,7 @@ enum weatherConditionHere { snowy, cloudy, sunny, rainy }
 
 // main method
 void main() {
-  calculator();
+  calculateInterestVariables();
 }
 
 void assertionProgram() {
@@ -236,4 +236,17 @@ void skipFortyOne() {
     }
     print(i);
   }
+}
+
+double calculateInterest(double principal2, double rate2, double time2) {
+  double interest = principal2 * rate2 * time2 / 100;
+  return interest;
+}
+
+void calculateInterestVariables() {
+  double principal1 = 5000;
+  double time1 = 3;
+  double rate1 = 3;
+  double result = calculateInterest(principal1, rate1, time1);
+  print("The simple interest is $result");
 }
