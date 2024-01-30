@@ -4,7 +4,7 @@ enum weatherConditionHere { snowy, cloudy, sunny, rainy }
 
 // main method
 void main() {
-  skipFortyOne();
+  calculator();
 }
 
 void assertionProgram() {
@@ -201,27 +201,27 @@ void calculator() {
   }
 }
 
-void addition(num1, num2) {
+void addition(number1, number2) {
   int? sum;
-  sum = num1 + num2;
+  sum = number1 + number2;
   print("The sum of two numbers is $sum");
 }
 
-void subtraction(num1, num2) {
+void subtraction(number1, number2) {
   int? diff;
-  diff = num1 - num2;
+  diff = number1 - number2;
   print("The difference of two numbers is $diff ");
 }
 
-void multiplication(num1, num2) {
+void multiplication(number1, number2) {
   int? product;
-  product = num1 * num2;
+  product = number1 * number2;
   print("The product of two numbers is $product");
 }
 
-void division(num1, num2) {
+void division(number1, number2) {
   double? quo;
-  quo = num1 / num2;
+  quo = number1 / number2;
   print("The quotient of two numbers is $quo");
 }
 
