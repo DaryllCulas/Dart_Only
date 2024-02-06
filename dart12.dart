@@ -1,5 +1,5 @@
 void main() {
-  inforVersion4();
+  givingValueToAddFunction();
 }
 
 /*Providing default on positional parameter in function */
@@ -39,4 +39,21 @@ void printInfoVersion4(String name, int age, [String? currentPosition]) {
 void inforVersion4() {
   printInfoVersion4("Daryll", 45);
   printInfoVersion4("Daryll", 34, "Programmer");
+}
+
+void simpleAddition(num1, num2) {
+  int sum = num1 + num2;
+  print("The sum is $sum");
+}
+
+void add(int a, int b) {
+  int sum = a + b;
+  print("The sum is $sum");
+}
+
+void givingValueToAddFunction() {
+  int num1 = 23;
+  int num2 = 34;
+
+  add(num1, num2);
 }
