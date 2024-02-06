@@ -1,7 +1,7 @@
 import 'dart:io';
 
 void main() {
-  employeeSalaryCalculation();
+  findingCube();
 }
 
 /*Providing default on positional parameter in function */
@@ -132,3 +132,41 @@ double employeeSalaryBasis(
 
   return officialEmployeeSalary;
 }
+
+// Arrow function
+
+void enterTwoNumbers() {
+  print("Enter First Number: ");
+  int? num1 = int.parse(stdin.readLineSync()!);
+  print("Enter Second Number");
+  int? num2 = int.parse(stdin.readLineSync()!);
+
+  print("$num1 + $num2 = ${sum(num1, num2)}");
+  print("$num1 - $num2 = ${diff(num1, num2)}");
+  print("$num1 x $num2 = ${prod(num1, num2)}");
+  print("$num1 / $num2 = ${quo(num1, num2)}");
+}
+
+int sum(int n1, int n2) => n1 + n2;
+int diff(int n1, int n2) => n1 - n2;
+int prod(int n1, int n2) => n1 * n2;
+double quo(int n1, int n2) => n1 / n2;
+
+// Anonymous Function
+
+void loopUsingForeach() {
+  const fruits = ["Apple", "Orange", "Banana", "Orange"];
+
+  fruits.forEach((element) => print(element));
+}
+
+void findingCube() {
+  print("Enter a number:");
+  int? number = int.parse(stdin.readLineSync()!);
+
+  int cubeResult = multiplier(number);
+
+  print("The cube of $number is $cubeResult");
+}
+
+int multiplier(int n) => n * n * n;
